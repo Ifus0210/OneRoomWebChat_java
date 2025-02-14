@@ -22,5 +22,4 @@
 1. Github desktop 열기
 2. 커밋 메시지 입력 후 Commit 버튼 누르기
 ![커밋메세지 입력창](docs/screenshots/ss.png)
-3. Push 버튼 누르기
-
+3. Push/Publish 버튼 누르기
