@@ -18,6 +18,9 @@
 
 1. 단축키 F5 누르기
 
+## 프로젝트 실행 테스트
+1. localhost:8080
+
 ## Github 에 결과물 업로드 방법
 1. Github desktop 열기
 2. 커밋 메시지 입력 후 Commit 버튼 누르기

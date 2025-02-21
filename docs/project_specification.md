@@ -1,21 +1,21 @@
 # WebChat 애플리케이션 명세서
 
 ## 프로젝트 개요
-Node.js와 Socket.IO를 기반으로 구축된 실시간 채팅 애플리케이션입니다. 단일 채팅방에서 다중 사용자를 지원하며 즉시 접속 기능을 제공합니다. 본 애플리케이션은 원활한 사용자 경험을 위해 단일 페이지 애플리케이션(SPA) 아키텍처를 따릅니다.
+Spring Boot와 WebSocket을 기반으로 구축된 실시간 채팅 애플리케이션입니다. 단일 채팅방에서 다중 사용자를 지원하며 즉시 접속 기능을 제공합니다. 본 애플리케이션은 원활한 사용자 경험을 위해 단일 페이지 애플리케이션(SPA) 아키텍처를 따릅니다.
 
 ## 기술 스택
 
 ### 백엔드
-- **Node.js**: 서버 사이드 자바스크립트 런타임
-- **Express**: 웹 애플리케이션 프레임워크
-- **Socket.IO**: 실시간 양방향 이벤트 기반 통신
-- **Eta**: 서버 사이드 렌더링을 위한 템플릿 엔진
+- **Spring Boot**: 웹 애플리케이션 프레임워크
+- **WebSocket**: 실시간 양방향 통신
+- **Thymeleaf**: 서버 사이드 템플릿 엔진
+- **Lombok**: 코드 생산성 향상
 
 ### 프론트엔드
 - **HTML5**: 구조 및 콘텐츠
 - **Pure CSS**: 프레임워크 없는 순수 CSS 스타일링
 - **Pure JavaScript**: 프레임워크 없는 순수 자바스크립트
-- **Socket.IO Client**: 서버와의 실시간 통신
+- **WebSocket Client**: 서버와의 실시간 통신
 
 ## 핵심 기능
 
@@ -47,31 +47,33 @@ Node.js와 Socket.IO를 기반으로 구축된 실시간 채팅 애플리케이�
 ## 프로젝트 구조
 ```
 webChat/
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── index.html
-├── views/
-│   └── layouts/
-│       └── main.eta
-├── server/
-│   ├── socket.js
-│   └── routes.js
-├── app.js
-└── package.json
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/chat/
+│   │   │       ├── controller/
+│   │   │       ├── service/
+│   │   │       ├── model/
+│   │   │       └── config/
+│   │   └── resources/
+│   │       ├── static/
+│   │       │   ├── css/
+│   │       │   └── js/
+│   │       └── templates/
+│   └── test/
+├── docs/
+└── pom.xml
 ```
 
 ## 구현 상세
 
 ### 서버 측
-1. **Express 서버 설정**
-   - HTTP 서버 구성
+1. **Spring Boot 서버 설정**
+   - WebSocket 서버 구성
    - 정적 파일 제공
-   - Eta 템플릿 엔진 통합
+   - Thymeleaf 템플릿 엔진 통합
 
-2. **Socket.IO 구현**
+2. **WebSocket 구현**
    - 연결 처리
    - 메시지 브로드캐스팅
    - 사용자 추적
