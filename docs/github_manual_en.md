@@ -11,17 +11,25 @@
 - Used to share your work with others
 - Example command: `git push origin main`
 
-## 3. Pull
+## 3. Fetch
+- Downloads the latest changes from remote repository
+- Unlike pull, does not merge changes into local branches
+- Used when you want to review changes before merging
+- Execute with command `git fetch origin`
+- Changes can be viewed in remote branches like 'origin/main'
+- Can merge changes later if needed 
+
+## 4. Pull
 - Downloads changes from remote repository to local repository
 - Combines fetch and merge operations
 - Example command: `git pull origin main`
 
-## 4. Merge
+## 5. Merge
 - Combines changes from different branches
 - Example: merging a feature branch into main
 - May result in conflicts that need manual resolution
 
-## 5. Branch
+## 6. Branch
 - Independent line of development
 - Allows multiple developers to work simultaneously
 - Created from main branch for new features or bug fixes
